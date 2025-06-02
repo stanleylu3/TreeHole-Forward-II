@@ -1,0 +1,408 @@
+/* App.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* === 基础布局与字体 === */
+body {
+  margin: 0;
+  background-color: #182734;
+  color: #ffffff;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+main {
+  width: calc(100% - 96px);
+  margin-top: 80px;
+  margin-left: 260px;
+  padding: 20px;
+  min-height: calc(100vh - 80px);
+  background-color: #1b1f2a;
+}
+
+/* === Header 顶部固定 === */
+.header {
+  position: fixed;
+  height: 48px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e324b;
+  padding: 16px 32px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo-title h1 {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 38px;
+  color: #f5a90f;
+  margin: 0;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  margin-left: 12px;
+}
+
+.tab {
+  background-color: transparent;
+  border: 2px solid #f5a90f;
+  color: #f5a90f;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab.active,
+.tab:hover {
+  background-color: #f5a90f;
+  color: #1a2b3c;
+}
+
+.search {
+  width: 460px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff18;
+  color: white;
+  font-size: 16px;
+}
+
+.add-post {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-post-icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.add-post:hover .add-post-icon {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* === Sidebar 左侧固定 === */
+.sidebar {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  width: 211px;
+  background-color: #1e2e3e;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.filter-top {
+  width: 100%;
+}
+
+.sidebar h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  font-size: 30px;
+  color: #f5a90f;
+  margin-top: 0;
+}
+
+.sidebar label {
+  display: block;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.sidebar select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  background-color: #ffffff10;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.sidebar-logo {
+  width: 140px;
+  margin-top: 32px;
+}
+
+/* === Post 列表 & 帖子卡片 === */
+.post-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.post-card {
+  border-radius: 12px;
+  padding: 24px;
+  background-color: #273544;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+}
+
+.post-header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff33;
+  border-radius: 50%;
+}
+
+.post-header-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.username {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.post-time {
+  font-size: 14px;
+  color: #ffffff99;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.category {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  color: #70a095;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.post-content {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 17px;
+  color: #e0e0e0;
+  margin-bottom: 6px;
+}
+
+.feeling {
+  background-color: #70a095;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.post-meta-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 16px;
+}
+
+.post-emojis {
+  font-size: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.post-emojis span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.comment-count {
+  font-weight: bold;
+  color: #f5a90f;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.comment-count:hover {
+  background-color: #ffffff10;
+}
+
+/* CreatePostPanel (new design) */
+.create-panel {
+  position: fixed;
+  top: 80px;
+  right: -420px;
+  width: 360px;
+  height: calc(100vh - 80px);
+  background-color: #1f2e3c;
+  padding: 28px;
+  transition: right 0.3s ease;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.create-panel.slide-in {
+  right: 0;
+}
+
+.create-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.avatar-circle {
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff22;
+  border-radius: 50%;
+}
+
+.anon-name {
+  font-family: "Sour Gummy", sans-serif;
+  color: #f5a90f;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+}
+
+.refresh-name {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #f5a90f;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.refresh-name img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(1.2);
+}
+
+.create-panel label {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 24px;
+  color: #f5a90f;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  margin-top: 18px;
+}
+
+.create-panel textarea {
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #ffffff10;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.char-count {
+  text-align: right;
+  color: #888;
+  font-size: 12px;
+  margin: 4px 0 12px;
+}
+
+.create-panel select {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffffff10;
+  color: white;
+}
+
+.fly-button {
+  font-family: "Sour Gummy", sans-serif;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  padding: 12px 0;
+  font-size: 24px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f5a90f;
+  color: #1a2b3c;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Overlay 修正 */
+.overlay {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1500;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
