@@ -100,7 +100,7 @@ main {
 
 .add-post:hover .add-post-icon {
   transform: scale(1.1);
-  filter: brightness(1.2);
+  filter: brightness(1.05);
 }
 
 /* === Sidebar 左侧固定 === */
@@ -150,7 +150,7 @@ main {
 }
 
 .sidebar-logo {
-  width: 140px;
+  width: 200px;
   margin-top: 32px;
 }
 
@@ -325,8 +325,8 @@ main {
 }
 
 .refresh-name img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   filter: brightness(1.2);
 }
 

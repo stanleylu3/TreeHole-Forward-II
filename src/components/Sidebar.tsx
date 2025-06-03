@@ -14,7 +14,7 @@ const Sidebar: React.FC = () => {
           <option>All</option>
         </select>
       </div>
-      <img src="/UCI Treehole.png" alt="Tree Logo" className="sidebar-logo" />
+      <img src="/treehole_icon.svg" alt="Tree Logo" className="sidebar-logo" />
     </aside>
   );
 };

@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ onAddPost }) => {
       <input type="text" className="search" placeholder="Search a post..." />
       <button className="add-post" onClick={onAddPost}>
         <img
-          src="/create_post.svg"
+          src="/create_new.svg"
           alt="Create Post"
           className="add-post-icon"
         />
