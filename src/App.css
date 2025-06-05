@@ -1,12 +1,14 @@
 /* App.css */
 
+/* Conform to UCI color palette if possible: https://brand.uci.edu/master-branding/color-palette/  */
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* === 基础布局与字体 === */
 body {
   margin: 0;
-  background-color: #182734;
+  background-color: #002244;
   color: #ffffff;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -17,7 +19,7 @@ main {
   margin-left: 260px;
   padding: 20px;
   min-height: calc(100vh - 80px);
-  background-color: #1b1f2a;
+  background-color: #1b3d6d;
 }
 
 /* === Header 顶部固定 === */
@@ -31,7 +33,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1e324b;
+  background-color: #255799;
   padding: 16px 32px;
 }
 
@@ -44,7 +46,7 @@ main {
 .logo-title h1 {
   font-family: "Sour Gummy", sans-serif;
   font-size: 38px;
-  color: #f5a90f;
+  color: #fecc07;
   margin: 0;
 }
 
@@ -55,19 +57,22 @@ main {
 }
 
 .tab {
+  font-family: "Sour Gummy", sans-serif;
   background-color: transparent;
-  border: 2px solid #f5a90f;
-  color: #f5a90f;
+  border: 2px solid #fecc07;
+  color: #fecc07;
   padding: 6px 14px;
   border-radius: 8px;
   font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .tab.active,
 .tab:hover {
-  background-color: #f5a90f;
+  background-color: #fecc07;
   color: #1a2b3c;
 }
 
@@ -76,9 +81,10 @@ main {
   padding: 10px 16px;
   border: none;
   border-radius: 12px;
-  background-color: #ffffff18;
-  color: white;
+  background-color: #c6beb5;
+  color: #002244;
   font-size: 16px;
+  border: 2px solid #fecc07;
 }
 
 .add-post {
@@ -110,7 +116,7 @@ main {
   bottom: 0;
   left: 0;
   width: 211px;
-  background-color: #1e2e3e;
+  background-color: #1b3d6d;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -124,29 +130,32 @@ main {
 }
 
 .sidebar h2 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
   font-weight: 900;
   text-align: center;
   font-size: 30px;
-  color: #f5a90f;
+  color: #fecc07;
   margin-top: 0;
 }
 
 .sidebar label {
+  font-family: "Nunito Sans", sans-serif;
   display: block;
   margin-top: 20px;
   font-size: 18px;
 }
 
 .sidebar select {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: 600;
   width: 100%;
   margin-top: 6px;
   padding: 10px;
-  background-color: #ffffff10;
+  background-color: #fecc0722;
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
 }
 
 .sidebar-logo {
@@ -164,7 +173,7 @@ main {
 .post-card {
   border-radius: 12px;
   padding: 24px;
-  background-color: #273544;
+  background-color: #1f2e3c;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
@@ -182,7 +191,7 @@ main {
 .avatar {
   width: 48px;
   height: 48px;
-  background-color: #ffffff33;
+  background-color: #c6beb5;
   border-radius: 50%;
 }
 
@@ -207,7 +216,7 @@ main {
 
 .post-time {
   font-size: 14px;
-  color: #ffffff99;
+  color: #c6beb5;
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -261,7 +270,7 @@ main {
 
 .comment-count {
   font-weight: bold;
-  color: #f5a90f;
+  color: #fecc07;
   cursor: pointer;
   padding: 6px 10px;
   border-radius: 6px;
@@ -269,7 +278,7 @@ main {
 }
 
 .comment-count:hover {
-  background-color: #ffffff10;
+  background-color: #fecc0722;
 }
 
 /* CreatePostPanel (new design) */
@@ -302,13 +311,13 @@ main {
 .avatar-circle {
   width: 48px;
   height: 48px;
-  background-color: #ffffff22;
+  background-color: #c6beb5;
   border-radius: 50%;
 }
 
 .anon-name {
   font-family: "Sour Gummy", sans-serif;
-  color: #f5a90f;
+  color: #fecc07;
   font-size: 28px;
   font-weight: 700;
   margin: 0;
@@ -319,7 +328,7 @@ main {
   background: none;
   border: none;
   font-size: 18px;
-  color: #f5a90f;
+  color: #fecc07;
   cursor: pointer;
   padding: 4px;
 }
@@ -330,20 +339,35 @@ main {
   filter: brightness(1.2);
 }
 
+/* add click effect for the refresh button */
+.refresh-name:hover {
+  transform: scale(1.1);
+  filter: brightness(1.05);
+}
+
+/* .refresh-name::after {
+} */
+
 .create-panel label {
   font-family: "Nunito Sans", sans-serif;
   font-size: 24px;
-  color: #f5a90f;
+  color: #fecc07;
   font-weight: 600;
   margin-bottom: 6px;
   display: block;
   margin-top: 18px;
 }
 
+.create-panel option {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  color: #fecc07;
+}
+
 .create-panel textarea {
   margin-top: 8px;
   padding: 10px;
-  background-color: #ffffff10;
+  background-color: #fecc0722;
   color: white;
   font-size: 15px;
   border: none;
@@ -370,19 +394,21 @@ textarea::placeholder {
   font-size: 15px;
   border-radius: 8px;
   border: none;
-  background-color: #ffffff10;
+  background-color: #fecc0722;
   color: white;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .fly-button {
   font-family: "Sour Gummy", sans-serif;
+  letter-spacing: 3px;
   margin-top: 28px;
   margin-bottom: 12px;
   padding: 12px 0;
   font-size: 24px;
   border-radius: 8px;
   border: none;
-  background-color: #f5a90f;
+  background-color: #fecc07;
   color: #1a2b3c;
   font-weight: bold;
   cursor: pointer;
