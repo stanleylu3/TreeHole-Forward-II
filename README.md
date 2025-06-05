@@ -2,9 +2,11 @@
 
 This project is the frontend for **TreeHole Forward II**, built using **React + TypeScript + Vite**.
 
----
-
 ## Quick Start
+
+### 0. Have your VS Code ready
+
+Everything below should preferably done in VS Code terminal. Please locate to your desired folder first.
 
 ### 1. Clone the repository
 
