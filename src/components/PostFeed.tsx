@@ -64,8 +64,28 @@ const PostFeed: React.FC = () => {
         </div>
       ))}
       {selectedPost && (
-      <div className="fixed inset-0 z-[9999] bg-black bg-opacity-50 flex justify-center items-center">
-        <div className="bg-white text-black p-6 rounded-lg max-w-lg w-[90%] shadow-lg relative">
+      <div className="fixed top-0 left-0 w-screen h-screen z-[9999] flex justify-center items-center bg-black bg-opacity-50"
+          style={{
+      display: "flex",
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100vw",
+      height: "100vh",
+      zIndex: 9999,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
+    }}>
+        <div className="bg-white text-black p-6 rounded-lg max-w-lg w-[90%] shadow-lg relative"
+        style={{ backgroundColor: "#1f2e3c", 
+        color: "#ffffff", 
+        padding: "24px",
+        borderRadius: "12px",
+        boxShadow: "0 2px 10px rgba(0, 0, 0, 0.2)",
+        maxWidth: "640px",
+        width: "90%",
+        position: "relative", }} >
           <button
             onClick={() => setSelectedPost(null)}
             className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl"
